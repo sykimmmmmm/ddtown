@@ -274,7 +274,6 @@
 		  , peo_gender
 		  , peo_phone
 		  , peo_last_nm || peo_first_nm as peoName
-		  , auth
 		  , m.mem_username
 		  , mem_stat_code
 		  , mem_reg_path

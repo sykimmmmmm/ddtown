@@ -87,4 +87,11 @@ public interface ISeatMapper {
 	 */
 	public int updateTicket(ConcertSeatMapVO csmVO);
 
+	/**
+	 * 좌석수 가져오기
+	 * @param concertHallNo
+	 * @return
+	 */
+	public int selectSeatCnt(int concertHallNo);
+
 }

@@ -165,4 +165,12 @@ public class SeatServiceImpl implements ISeatService {
 		}
 		return result;
 	}
+
+	/**
+	 * 좌석 수 가져오기
+	 */
+	@Override
+	public int selectSeatCnt(int concertHallNo) {
+		return seatMapper.selectSeatCnt(concertHallNo);
+	}
 }

@@ -129,12 +129,13 @@ public class ConcertServiceImpl implements IConcertService {
             // 콘서트 시트 매핑 정보 및 티켓정보 추가
             if("N".equals(concertVO.getConcertOnlineYn())) {
             	// 티켓정보 넣기전에 상품등록 후 상품번호를 티켓정보에 같이 저장하는 로직이 추가되면 괜찮아질듯
+            	int seatCnt = seatService.selectSeatCnt(concertVO.getConcertHallNo());
             	goodsVO goodsVO = new goodsVO();
             	goodsVO.setArtGroupNo(concertVO.getArtGroupNo());
             	goodsVO.setGoodsNm(concertVO.getConcertNm());
             	goodsVO.setStatusEngKey("IN_STOCK");
             	goodsVO.setGoodsPrice(110000);
-            	goodsVO.setStockRemainQty(1000);
+            	goodsVO.setStockRemainQty(seatCnt);
             	goodsVO.setGoodsDivCode("GDC001");
             	goodsService.itemsRegister(goodsVO);
 

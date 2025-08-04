@@ -206,4 +206,13 @@
 	    and
 	       substr(t.seat_no,1,1) = #{seatSection}
     </update>
+
+    <select id="selectSeatCnt" parameterType="int" resultType="int">
+    	select
+    		concert_capacity
+    	from
+    		concert_hall
+    	where
+    		concert_hall_no = #{concertHallNo}
+    </select>
 </mapper>

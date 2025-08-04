@@ -59,6 +59,12 @@ public interface ISeatService {
 	 */
 	public ServiceResult updateConcertSeatMap(ConcertSeatMapVO csmVO);
 
+	/**
+	 * 콘서트홀 콘서트 좌석 수 가져오기
+	 * @param concertHallNo
+	 * @return
+	 */
+	public int selectSeatCnt(int concertHallNo);
 
 
 }
